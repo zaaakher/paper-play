@@ -14,12 +14,6 @@ class Drawing extends React.Component {
 				//type: input type
 				//name: input name
 				//label: input label
-				text: {
-					value: "Hello World",
-					type: "text",
-					name: "text",
-					label: "Text"
-				},
 				divisions: {
 					value: 7,
 					type: "number",
@@ -37,24 +31,6 @@ class Drawing extends React.Component {
 					type: "range",
 					name: "size",
 					label: "Size"
-				},
-				strokeSize: {
-					value: 10,
-					type: "range",
-					name: "strokeSize",
-					label: "Stroke Size"
-				},
-				yOffset: {
-					value: 20,
-					type: "range",
-					name: "yOffset",
-					label: "Y-Offset"
-				},
-				xOffset: {
-					value: 20,
-					type: "range",
-					name: "xOffset",
-					label: "X-Offset"
 				},
 				color: {
 					value: "#000000",
@@ -112,13 +88,7 @@ class Drawing extends React.Component {
 		}
 	}
 	drawing(props) {
-		//draw here
-		let cir = new Paper.Path.Circle(Paper.view.center, props.size.value);
-		cir.fillColor = props.color.value;
-		cir.position.x += props.xOffset.value;
-		cir.position.y += props.yOffset.value;
-		cir.strokeColor = "red";
-		cir.strokeWidth = props.strokeSize.value;
+		console.log(props.divisions.value);
 	}
 	render() {
 		return (
